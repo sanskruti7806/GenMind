@@ -1,0 +1,23 @@
+GenMind Process Flow
+This document outlines the core user journey and the underlying logic of the GenMind application.
+
+1. User Check-in
+The user opens the app and is prompted to check in with their current mood. They can select an emoji or type a brief description of how they are feeling.
+
+2. Sentiment & Mood Analysis
+The user's input is sent to the backend. The backend uses a Natural Language Processing (NLP) model to perform sentiment analysis. The model categorizes the mood as positive, neutral, or negative, and identifies keywords related to emotions like stress or anxiety.
+
+3. AI Response Generation
+Based on the mood analysis, the AI determines the appropriate response.
+
+Positive/Neutral Mood: The AI provides encouraging affirmations or prompts the user for a journal entry.
+
+Negative Mood (Low): The AI offers a gentle, empathetic conversation, suggests a guided mindfulness exercise, or generates calming music/art.
+
+Negative Mood (High/Crisis): The system's crisis detection model identifies signs of severe distress. The AI's response is a pre-defined message that gently recommends professional mental health helplines, providing a direct link and a hotline number.
+
+4. Creative Output
+If the user selects a creative coping tool, the backend sends a request to a Generative AI model. The model generates new content (e.g., a short piece of music or a simple visual pattern) and streams it back to the user.
+
+5. Data & Journaling
+All user interactions, mood data, and journal entries are securely stored in the Firebase database. This allows the user to track their progress over time and for the AI to provide more personalized support in the future.
