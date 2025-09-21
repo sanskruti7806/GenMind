@@ -1,0 +1,42 @@
+GenMind System Architecture
+The GenMind prototype is built on a simple, layered architecture to ensure scalability and maintainability.
+
+1. User Interface (UI) Layer
+Technology: React Native
+
+Purpose: This is the client-side application that the user interacts with directly on their mobile device. It handles all user input, displays the chatbot conversation, and plays the generated media.
+
+2. Backend Layer
+Technology: Python with Flask or FastAPI
+
+Purpose: The backend serves as the bridge between the UI and the AI models. It receives requests from the app, processes them, and returns responses. This layer contains the core business logic, including:
+
+API endpoints for communication.
+
+Sentiment and mood analysis logic.
+
+Database connection and data handling.
+
+3. Generative AI Layer
+Technology: Generative AI models (e.g., LLMs for text, generative media models for art/music)
+
+Purpose: This layer is responsible for all the AI-powered features. It takes processed requests from the backend and generates:
+
+Empathetic conversational responses.
+
+Reflective journaling prompts and affirmations.
+
+New, unique visual and audio content.
+
+4. Data & Storage Layer
+Technology: Firebase
+
+Purpose: A secure, cloud-hosted database that stores all user data. This includes:
+
+User profiles and authentication data.
+
+Mood history and sentiment scores.
+
+Journal entries and conversation logs.
+
+This also includes Firebase Cloud Messaging for push notifications.
